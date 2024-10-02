@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Swed Dzmitriy Igaravich</title>
+    <script src="math.js"></script>
+    <script>
+        function showDialog() {
+            const month = getCurrentMonth();
+            alert(`Текущий месяц: ${month}`);
+        }
+        
+        function getCurrentMonth() {
+            const date = new Date();
+            const month = date.getMonth() + 1; // +1 потому что месяцы считаются от 0
+            return month;
+        }
+    </script>
+</head>
+<body>
+    <button onclick="showDialog()">Показать месяц</button>
+    <script>
+        let n = 19;
+        let count = n + 5;
+        let text = "Swed Dzmitriy";
+        let i = 0;
+    
+        while (i < count) {
+          document.write(text + "<br>");
+          i++;
+        }
+    </script>
+    <script>
+        let arr = [];
+        for (let i = 0; i < 7; i++) {
+          arr.push(Math.floor(Math.random() * 100));
+        }
+    
+        document.write("Массив: " + arr + "<br>");
+    
+        let max = Math.max(...arr);
+    
+        document.write("Максимальный элемент: " + max);
+    </script>
+    <h2>Расчет формулы</h2>
+    <form>
+        <label for="a">a:</label>
+        <input type="number" id="a" value="2" step="any"><br><br>
+        <label for="x">x:</label>
+        <input type="number" id="x" value="1" step="any"><br><br>
+        <button type="button" onclick="calculateAndDisplay()">Рассчитать</button>
+        <div id="result"></div>
+    </form>
+    <h2>Строковые переменные</h2>
+    <p>s1: <span id="s1"></span></p>
+    <p>s2: <span id="s2"></span></p>
+    <button onclick="runScript()">Выполнить скрипт</button>
+    <div id="script-result"></div>
+    <script>
+        let s1 = "Я люблю Беларусь";
+        let s2 = "Я учусь в Политехническом колледже";
+        
+        document.getElementById("s1").innerHTML = s1;
+        document.getElementById("s2").innerHTML = s2;
+        
+        function runScript() {
+            // Определяем длину строки s2
+            let lengthS2 = s2.length;
+            document.getElementById("script-result").innerHTML += `Длина строки s2: ${lengthS2}<br>`;
+            
+            // Слишком больщой вариант
+            let n = 10;
+            let symbol = s1[n - 1];
+            document.getElementById("script-result").innerHTML += `n-символ в строке s1: ${symbol}<br>`;
+            
+            // Определяем ASCII-код n-символа
+            let asciiCode = symbol.charCodeAt(0);
+            document.getElementById("script-result").innerHTML += `ASCII-код n-символа: ${asciiCode}<br>`;
+            
+            // Заменяем в s1 "Беларусь" на "Гродно"
+            let newS1 = s1.replace("Беларусь", "Гродно");
+            document.getElementById("script-result").innerHTML += `Новая строка s1: ${newS1}`;
+        }
+    </script>
+</body>
+</html>

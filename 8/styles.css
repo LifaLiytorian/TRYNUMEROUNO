@@ -1,0 +1,115 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .box {
+    width: 20%;
+    height: 100px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .box:nth-child(1) {
+    background-color: #FF69B4;
+    border-radius: 50%;
+  }
+  
+  .box:nth-child(2) {
+    background-color: #33CC33;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .box:nth-child(3) {
+    background-color: #6666FF;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .box:nth-child(4) {
+    background-color: #FFCC00;
+    border: 2px solid #000;
+  }
+  
+  .box:nth-child(5) {
+    background-color: #0099CC;
+    transform: rotate(45deg);
+  }
+  
+  .box:nth-child(6) {
+    background-color: #FF99CC;
+    padding: 20px;
+  }
+  
+  .box:nth-child(7) {
+    background-color: #33FFFF;
+    border-radius: 10px;
+  }
+  
+  .box:nth-child(8) {
+    background-color: #666600;
+    font-style: italic;
+  }
+  
+  .box:nth-child(9) {
+    background-color: #CCFFCC;
+    text-align: right;
+  }
+  
+  .box:nth-child(10) {
+    background-color: #FF6666;
+    opacity: 0.5;
+  }
+  
+  .box:nth-child(11) {
+    background-color: #009999;
+    font-size: 18px;
+  }
+  
+  .box:nth-child(12) {
+    background-color: #CC6666;
+    border-bottom: 2px solid #000;
+  }
+  
+  .box:nth-child(13) {
+    background-color: #33CC99;
+    padding: 10px;
+  }
+  
+  .box:nth-child(14) {
+    background-color: #FFCC99;
+    transform: scale(1.2);
+  }
+  
+  .box:nth-child(15) {
+    background-color: #6666CC;
+    font-weight: normal;
+  }
+  
+  .box:nth-child(16) {
+    background-color: #0099FF;
+    border-left: 2px solid #000;
+  }
+  
+  .box:nth-child(17) {
+    background-color: #FF99FF;
+    text-decoration: underline;
+  }
+  
+  .box:nth-child(18) {
+    background-color: #33FFFF;
+    border-top: 2px solid #000;
+  }
+  
+  .box:nth-child(19) {
+    background-color: #666600;
+    font-size: 20px;
+  }
+  
+  .box:nth-child(20) {
+    background-color: #CCFF99;
+    transform: rotate(-45deg);
+  }

@@ -1,0 +1,65 @@
+html  {
+    background-image:url(../html/images/stock.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+table, tr, td, th{
+    border: 1px solid;
+    border-color: black;
+    border-collapse: collapse;
+}
+
+table{
+    width: 100%;
+}
+
+#main-container { /*Главный див, блок в центре*/
+    width: 60%; /* Процент ширины блока */
+    margin: 0 auto; /* Центрирование блока по горизонтали */
+    background-image: linear-gradient(to bottom, #87CEEB, #4682B4); /* Добавляем градиент */
+    background-size: cover;
+    border: 1px solid black;
+    border-radius: 10px; /* Добавляем скругленные углы */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Добавляем тень */
+    padding: 20px; /* Добавляем отступы */
+}
+
+ul {
+    padding: 20px; /* Уменьшаем отступы */
+    list-style: none; /* Убираем маркеры списка */
+}
+
+td, th{
+    text-align: center;
+    padding: 10px; /* Добавляем отступы */
+}
+
+h1, h2 {
+    text-align: center; /* Центрируем заголовки */
+    margin-bottom: 20px; /* Добавляем отступы */
+}
+
+a {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: blue; /* Меняем цвет ссылок */
+}
+
+a:hover {
+    color: red; /* Меняем цвет ссылок при наведении */
+}
+
+footer {
+    text-align: center; /* Центрируем футер */
+    margin-top: 20px; /* Добавляем отступы */
+}
+
+#Anketa {
+    text-align: center; /* Центрируем текст */
+    margin-bottom: 20px; /* Добавляем отступы */
+    background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red); /* Добавляем градиент */
+    background-clip: text; /* Ограничиваем градиент текстом */
+    -webkit-text-fill-color: transparent; /* Делаем текст прозрачным */
+}

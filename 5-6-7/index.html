@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout</title>
+    <style>
+        /* Container with flexbox layout, column direction, full height and width */
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            width: 100%;
+            background-color: grey;
+        }
+        /* Large rectangle taking up 2 parts of the flex space */
+        .large-rectangle {
+            flex: 2;
+            background-color: lightgray;
+        }
+        /* Row with flexbox layout, taking up 1 part of the flex space */
+        .row {
+            display: flex;
+            flex: 1;
+        }
+        /* Small rectangle taking up 1 part of the flex space, with margin */
+        .small-rectangle {
+            flex: 1;
+            background-color: lightgray;
+            margin: 1%;
+        }
+        /* Long rectangle in the middle row taking up 3 parts of the flex space */
+        .long-rectangle {
+            flex: 3;
+            margin: 1%;
+            background-color: burlywood;
+        }
+        /* Full-width rectangle in the bottom row taking up 1 part of the flex space */
+        .bottom-row .full-width-rectangle {
+            flex: 1;
+        }
+        /* Adjustments for middle row */
+        .middle-row .small-rectangle {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Large rectangle at the top -->
+        <div class="large-rectangle">1</div>
+        <!-- Top row with three small rectangles -->
+        <div class="row top-row">
+            <div class="small-rectangle">3</div>
+            <div class="small-rectangle">4</div>
+            <div class="small-rectangle">5</div>
+            <div class="small-rectangle">6</div>
+        </div>
+        <!-- Middle row with one small rectangle and one long rectangle -->
+        <div class="row middle-row">
+            <div class="small-rectangle">7</div>
+            <div class="long-rectangle">8</div>
+        </div>
+        <div class="row middle-low-row">
+            <div class="small-rectangle">9</div>
+            <div class="long-rectangle">10</div>
+            <div class="small-rectangle">11</div>
+        </div>
+        <!-- Bottom row with one full-width rectangle -->
+        <div class="row bottom-row">
+            <div class="small-rectangle full-width-rectangle">2</div>
+        </div>
+    </div>
+</body>
+</html>

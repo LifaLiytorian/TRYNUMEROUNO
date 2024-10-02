@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/barabara.ico">
+    <link rel="stylesheet" href="style.css">
+    <title>Mind Brand</title>
+</head>
+<body>
+
+<header>
+    <img src="images/dethmomoi.gif" width="100" height="100" alt="dethmomoi">
+    <h1>Моё Резюме</h1>
+</header>
+<hr>
+<div id="main-container" class="sufferings">
+<section id="about">
+    <h2>Обо мне</h2>
+    <p><i>Привет!</i> Меня зовут - <u>Дзмітрый</u> или просто <b>Bronza</b>. Учащийся 3 курса политехнического колледжа.</p>
+</section>
+<section id="skills">
+    <h2>Навыки</h2>
+    <ul>
+        <li><s>C#</s></li>
+        <li><b>Python</b></li>
+        <li>22 Ошибки валидации</li>
+    </ul>
+</section>
+
+<section id="media">
+    <img src="images/Photka.jpg" width="500" height="300" alt="Photka clowna">
+    <video src="media/BestGirl.mov" width="180" height="320" controls autoplay muted></video>
+</section>
+
+<h2>
+    Любимые треки
+</h2>   
+    <table class="songs">
+        <tr>
+            <th>Продюсер</th>
+            <th>Вокалоид</th>
+            <th>Название</th>
+            <th>Песня</th>
+        </tr>
+        <tr>
+            <td>Kairiki Bear</td>
+            <td>Hatsune Miku</td>
+            <td>Noisy Man</td>
+            <td><audio src="media/Noisy.mp3" controls loop></audio></td>
+        </tr>
+        <tr>
+            <td>MARETU</td>
+            <td>Hatsune Miku</td>
+            <td>UMINAOSHI</td>
+            <td><audio src="media/UMINAOSHI.mp3" controls loop></audio></td>
+        </tr>
+        <tr>
+            <td>Rerulili</td>
+            <td>GUMI</td>
+            <td>Noushou Sakuretsu Garu</td>
+            <td><audio src="media/Noushou.mp3" controls loop></audio> </td>
+        </tr>
+    </table>
+   
+<h2 id="Anketa">Анкета</h2>
+<form action="/submit-anketa" method="post">
+    <label for="name">Имя:</label>
+    <input type="text" id="name" name="name" required><br>
+    <label for="age">Возраст:</label>
+    <input type="number" id="age" name="age" required><br>
+    <input type="submit" value="Отправить">
+</form>
+
+<h2>Опрос</h2>
+<form action="/submit-survey" method="post">
+    <p>Какой ваш любимый цвет?</p>
+    <input type="radio" id="red" name="color" value="red">
+    <label for="red">Красный</label><br>
+    <input type="radio" id="blue" name="color" value="blue">
+    <label for="blue">Синий</label><br>
+    <input type="submit" value="Отправить">
+</form>
+   
+   <a href="#about">Обо мне</a>
+   <a href="https://github.com/LifaLiytorian">GitHub</a>
+    
+   <p>Это моё резюме. © 2024</p>
+
+<footer>© 2024 by Bronza.</footer>
+</div>
+</body>
+</html>

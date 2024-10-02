@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript Embedding Examples</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <!--Internal-->
+    <script>
+      function sayHelloInternal() {
+        alert('Hello, World! (Internal)');
+      }
+      </script>
+    <button onclick="sayHelloInternal()">Click me (Internal)</button>
+
+    <!--Inline-->
+    <button onclick="alert('Hello, World! (Inline)')">Click me (Inline)</button>
+
+    <!--Event Listeners-->
+    <button id="hello-button-event-listener">Click me (Event Listener)</button>
+    <script>
+      function sayHelloEventListener() {
+        alert('Hello, World! (Event Listener)');
+      }-
+      document.getElementById('hello-button-event-listener').addEventListener('click', sayHelloEventListener);
+    </script>
+
+    <!--External-->
+    <a href="javascript:sayHelloExternal()">Click me to run JavaScript</a>
+    <button id="hello-button-external">Click me (External)</button>
+    <audio id="audio-file" src="C:\Users\37533\Downloads\amonus.mp3" preload="auto"></audio>
+    <script src="scripts.js"></script>
+
+    <!--Continue Example-->
+    <button id="continue-button">Continue Example</button>
+    <div id="continue-result"></div>
+    <script>
+      document.getElementById('continue-button').addEventListener('click', function() {
+        var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        var result = '';
+        for (var i = 0; i < numbers.length; i++) {
+          if (numbers[i] === 5) {
+            continue;
+          }
+          result += numbers[i] + ' ';
+        }
+        document.getElementById('continue-result').innerHTML = 'Result: ' + result;
+      });
+    </script>
+
+    <!--Return Example-->
+    <button id="return-button">Return Example</button>
+    <div id="return-result"></div>
+    <script>
+      document.getElementById('return-button').addEventListener('click', function() {
+        function addNumbers(a, b) {
+          if (a > 10) {
+            return 'Error: a is too large';
+          }
+          return a + b;
+        }
+        var result = addNumbers(5, 3);
+        document.getElementById('return-result').innerHTML = 'Result: ' + result;
+      });
+    </script>
+
+    <!--Prompt Example-->
+    <button id="prompt-button">Prompt Example</button>
+    <div id="prompt-result"></div>
+    <script>
+      document.getElementById('prompt-button').addEventListener('click', function() {
+        var name = prompt('What is your name?', 'John Smith');
+        if (name !== null) {
+          document.getElementById('prompt-result').innerHTML = 'Hello, ' + name + '!';
+        } else {
+          document.getElementById('prompt-result').innerHTML = 'You cancelled the prompt!';
+        }
+      });
+    </script>
+
+    <!--2-->
+    <button id="check-age-button">Check age</button>
+<div id="age-result"></div>
+
+<button id="check-day-button">Check day</button>
+<div id="day-result"></div>
+
+<ul id="numbers-list"></ul>
+
+<button id="count-button">Count</button>
+<p id="count-paragraph"></p>
+
+<button id="roll-dice-button">Roll dice</button>
+<p id="dice-result-paragraph"></p>
+
+  </body>
+</html>

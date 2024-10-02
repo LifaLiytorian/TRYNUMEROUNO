@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        body {
+            margin: 0;
+            display: grid;
+            grid-template-rows: 2fr 1fr 1fr 1fr 1fr; /* 5 rows */
+            grid-template-columns: repeat(4, 1fr); /* 4 columns of equal width */
+            height: 100vh;
+            grid-gap: 5px;
+        }
+
+        .header {
+            grid-column: 1 / -1; 
+            grid-row: 1 / 2;
+            background-color: lightgray;
+        }
+
+        .small-2 {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+            background-color: lightgray;
+        }
+
+        .small-3 {
+            grid-column: 2 / 3; 
+            grid-row: 2 / 3;
+            background-color: lightgray;
+        }
+
+        .small-4 {
+            grid-column: 3 / 4;
+            grid-row: 2 / 3;
+            background-color: lightgray;
+        }
+
+        .small-5 {
+            grid-column: 4 / -1;
+            grid-row: 2 / 3;
+            background-color: lightgray;
+        }
+
+        .small-1 {
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+            background-color: lightgray;
+        }
+
+        .large-1 {
+            grid-column: 2 / -1;
+            grid-row: 3 / 4;
+            background-color: lightgray;
+        }
+
+        .small-6 {
+            grid-column: 1 / 2;
+            grid-row: 4 / 5;
+            background-color: lightgray;
+        }
+
+        .medium-1 {
+            grid-column: 2 / 4;
+            grid-row: 4 / 5;
+            background-color: lightgray;
+        }
+
+        .small-7 {
+            grid-column: 4 / -1;
+            grid-row: 4 / 5; 
+            background-color: lightgray;
+        }
+
+        .full-8 {
+            grid-column: 1 / -1; 
+            grid-row: 5 / 6; 
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">1</div>
+    <div class="small-2">2</div>
+    <div class="small-3">3</div>
+    <div class="small-4">4</div>
+    <div class="small-5">5</div>
+    <div class="small-1">6</div>
+    <div class="large-1">7</div>
+    <div class="small-6">8</div>
+    <div class="medium-1">9</div>
+    <div class="small-7">10</div>
+    <div class="full-8">11</div>
+</body>
+</html>

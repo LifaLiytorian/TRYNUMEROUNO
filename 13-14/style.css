@@ -1,0 +1,22 @@
+.images{
+    text-align: center;
+}
+#first-element {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00698f;
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+  }
+  #Hate {
+    text-decoration: none;
+    color: #0099ff;
+  }
+  
+  #Hate:hover {
+    color: #0066cc;
+    text-decoration: underline;
+  }

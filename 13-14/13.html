@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <p id="first-element">Swed Dzmitriy Igaravich</p>
+    <div class="images">
+        <img src="Swed.jfif" width="512" height="512" id="swed-img">
+        <img src="Dmit.jfif" width="512" height="512">
+        <img src="igaravich.jfif" width="512" height="512">
+    </div>
+    <img src="glitch.png" width="512" height="512" class="glitch">
+    <div id="cookie-info"></div>
+    <button id="change-style">Change Style</button>
+    <a href="https://www.youtube.com/@kairikibear" id="Hate">Throught The Heaven And Earth, I Am Alone, The Honored One</a>
+<script>
+    function getCookieInfo() { //Cookie
+        var cookies = document.cookie.split(';');
+        var cookieInfo = '';
+        for (var i = 0; i < cookies.length; i++) {
+          var cookie = cookies[i].trim();
+          var parts = cookie.split('=');
+          cookieInfo += `Cookie: ${parts[0]} = ${parts[1]}\n`;
+        }
+        return cookieInfo;
+      }
+  setInterval(function() {
+    document.getElementById('cookie-info').innerHTML = getCookieInfo();
+  }, 2000);
+
+  document.getElementById('first-element').addEventListener('click', function() { //Removal
+    this.remove();
+  });
+
+  document.getElementById('change-style').addEventListener('click', function() { //Change Style
+    var firstElement = document.getElementById('first-element');
+    document.body.style.backgroundImage = "url('glitch.png')";
+    firstElement.style.fontFamily = "Arial";
+    firstElement.style.fontSize = "11px";
+    firstElement.style.color = "red";
+    
+    var linkElement = document.getElementById('Hate');
+    linkElement.style.color = "green";
+    linkElement.style.textDecoration = "none";
+  });
+
+  // Add system information window
+  window.onload = function() {
+    var userAgent = navigator.userAgent;
+    var os = "";
+    if (userAgent.indexOf("Win") != -1) os = "Windows";
+    else if (userAgent.indexOf("Mac") != -1) os = "MacOS";
+    else if (userAgent.indexOf("Linux") != -1) os = "Linux";
+    else if (userAgent.indexOf("Android") != -1) os = "Android";
+    else if (userAgent.indexOf("like Mac") != -1) os = "iOS";
+    
+    var systemInfoWindow = window.open("", "System Info", "width=300,height=400");
+    systemInfoWindow.document.write(`
+      <h1>System Information</h1>
+      <p>Operating System: ${os}</p>
+      <p>Browser: ${navigator.userAgent}</p>
+      <p>Platform: ${navigator.platform}</p>
+      <p>Language: ${navigator.language}</p>
+      <p>Screen Resolution: ${screen.width}x${screen.height}</p>
+    `);
+    setTimeout(function() {
+      systemInfoWindow.close();
+    }, 3000);
+  };
+</script>
+</body>
+</html>

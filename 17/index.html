@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интерфейсные события</title>
+    <style>
+        #dropArea {
+            width: 300px;
+            height: 200px;
+            border: 2px dashed #ccc;
+            margin: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #touchArea {
+            width: 300px;
+            height: 200px;
+            background-color: #f0f0f0;
+            margin: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Примеры интерфейсных событий</h1>
+
+    <button id="myButton">Нажми меня</button>
+
+    <div id="dropArea">Перетащи сюда текст</div>
+
+    <div id="touchArea">Коснись меня</div>
+
+    <script>
+        // События мыши
+        document.getElementById('myButton').addEventListener('click', function() {
+            alert('Кнопка нажата!');
+        });
+
+        // События клавиатуры
+        document.addEventListener('keydown', function(event) {
+            console.log('Нажата клавиша: ' + event.key);
+        });
+
+        // Drag&DROP события
+        const dropArea = document.getElementById('dropArea');
+
+        dropArea.addEventListener('dragover', function(event) {
+            event.preventDefault(); // Предотвращаем стандартное поведение
+        });
+
+        dropArea.addEventListener('drop', function(event) {
+            event.preventDefault();
+            const data = event.dataTransfer.getData('text');
+            dropArea.textContent = 'Вы уронили: ' + data;
+        });
+
+        // События указателя
+        document.getElementById('myButton').addEventListener('pointerdown', function(event) {
+            console.log('Указатель нажат!');
+        });
+
+        // События полосы прокрутки
+        window.addEventListener('scroll', function() {
+            console.log('Прокрутка страницы!');
+        });
+
+        // События сенсорных экранов
+        document.getElementById('touchArea').addEventListener('touchstart', function(event) {
+            console.log('Экран коснулся!');
+        });
+
+        // События с таймером
+        setTimeout(function() {
+            alert('Прошло 3 секунды!');
+        }, 3000);
+    </script>
+
+</body>
+</html>

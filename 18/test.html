@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма пользователя</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Пользовательская форма</h1>
+<form id="userForm">
+    <div class="form-group">
+        <label for="name">Имя:</label>
+        <input type="text" id="name" required>
+    </div>
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+    </div>
+    <div class="form-group">
+        <label for="age">Возраст:</label>
+        <input type="number" id="age" min="1" max="120" required>
+    </div>
+    <div class="form-group">
+        <label>Пол:</label><br>
+        <input type="radio" id="male" name="gender" value="Мужской" required>
+        <label for="male">Мужской</label><br>
+        <input type="radio" id="female" name="gender" value="Женский">
+        <label for="female">Женский</label>
+    </div>
+    <div class="form-group">
+        <label for="hobbies">Хобби:</label><br>
+        <input type="checkbox" id="hobby1" value="Чтение">
+        <label for="hobby1">Чтение</label><br>
+        <input type="checkbox" id="hobby2" value="Спорт">
+        <label for="hobby2">Спорт</label><br>
+        <input type="checkbox" id="hobby3" value="Путешествия">
+        <label for="hobby3">Путешествия</label>
+    </div>
+    <div class="form-group">
+        <label for="country">Страна:</label>
+        <select id="country" required>
+            <option value="">Выберите страну</option>
+            <option value="Россия">Россия</option>
+            <option value="США">США</option>
+            <option value="Германия">Германия</option>
+        </select>
+    </div>
+    <button type="submit">Отправить</button>
+</form>
+
+<script>
+    document.getElementById('userForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Предотвращаем отправку формы
+
+        // Извлечение данных из формы
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const age = document.getElementById('age').value;
+        const gender = document.querySelector('input[name="gender"]:checked')?.value;
+        const hobbies = Array.from(document.querySelectorAll('input[type="checkbox"]:checked')).map(checkbox => checkbox.value);
+        const country = document.getElementById('country').value;
+
+        // Валидация данных
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            alert('Введите корректный email!');
+            return;
+        }
+
+        // Формирование сообщения
+        const message = `
+            Имя: ${name}
+            Email: ${email}
+            Возраст: ${age}
+            Пол: ${gender}
+            Хобби: ${hobbies.join(', ') || 'Нет'}
+            Страна: ${country}
+        `;
+
+        // Вывод данных в диалоговом окне
+        alert(message);
+    });
+</script>
+
+</body>
+</html>
